@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Train Schedule Using Firebase</title>
+    <meta charset="UTF-8">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <!-- Firebase Reference -->
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+    <!-- Moment.js Reference -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <!-- basic stylesheet -->
+    <link rel="stylesheet" href="./Assets/CSS/style.css">
+    <!-- Icon in title bar -->
+    <link rel="icon" href="./Assets/Images/logo.png">
+</head>
+
+<body>
+
+    <body>
+        <div class="container">
+            <div class="jumbotron">
+                <h1 class="display-4">Train Schedule!</h1>
+                <h3 class="text-center">ALLLLL ABOARD</h3>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+                    <!-- Current Trains -->
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                <strong>Current Train</strong>
+                            </h3>
+                        </div>
+                        <div class="panel-body">
+                            <table class="table table-hover" id='trainTable'>
+                                <thead>
+                                    <tr>
+                                        <th>Train Name</th>
+                                        <th>Destination</th>
+                                        <th>Frequency</th>
+                                        <th>Next Arrival</th>
+                                        <th>Minutes Away</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="schedule-data">
+                                    <!-- TRAIN SCHEDULE DATA GOES HERE -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                <strong>Add Train</strong>
+                            </h3>
+                        </div>
+                        <div class="panel-body">
+                            <form>
+                                <div class="form-group">
+                                    <label for="add-name">Name</label>
+                                    <input type="text" class="form-control" id="add-name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="add-destination">Destination</label>
+                                    <input type="text" class="form-control" id="add-destination">
+                                </div>
+                                <div class="form-group">
+                                    <label for="add-start-time">Start Time (hh:mm - military format)</label>
+                                    <input type="text" class="form-control" id="add-start-time">
+                                </div>
+                                <div class="form-group">
+                                    <label for="add-frequency">Frequency (minutes)</label>
+                                    <input type="text" class="form-control" id="add-frequency">
+                                </div>
+                                <button type="submit" class="btn btn-default" id="add-button">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- jQuery Library -->
+                <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="
+                    crossorigin="anonymous"></script>
+                <!-- Main javascript link -->
+                <script src="./Assets/Javascript/main.js"></script>
+    </body>
+
+    </html>

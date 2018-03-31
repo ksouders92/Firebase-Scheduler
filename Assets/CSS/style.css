@@ -1,0 +1,15 @@
+.jumbotron {
+    padding-top: 40px;
+    float: center;
+    text-align: center;
+    background-color: #666;
+    background-size: cover;
+    background-image: url("../Images/city_train.gif");
+    overflow: auto;
+    background-repeat: no-repeat;
+    height: 300px;
+    width: 640px;
+}
+
+
+ 
